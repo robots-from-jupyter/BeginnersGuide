@@ -6,7 +6,7 @@ var getNotebookBaseUrl = function() {
 var setNotebookBaseUrl = function(url) {
   url = url.split("/notebooks/")[0];
   if (!url.match(/\/tree$/)) { url += "/tree"; }
-  document.cookie = "notebook=" + url + ";max-age=300";
+  document.cookie = "notebook=" + url + ";max-age=30";
   if (typeof console !== "undefined" && console.log) {
     console.log("Hearbeat from " + url);
   }

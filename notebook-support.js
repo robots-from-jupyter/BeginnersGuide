@@ -32,8 +32,9 @@ var createButton = function(url) {
   var button = document.createElement("button");
   button.innerHTML = "Try this example in browser";
   button.addEventListener("click", function() {
-      button.parentElement.appendChild(createIframe(url));
-      button.parentElement.removeChild(button);
+    button.parentElement.appendChild(createIframe(url));
+    button.parentElement.removeChild(button);
+    document.cookie = "notebook=" + url + ";max-age=0";
   });
   return button;
 };
